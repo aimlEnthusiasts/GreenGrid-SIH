@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def forecast_generation(hours=24):
     """Simulate solar & wind forecast"""
     hours_arr = np.arange(hours)
@@ -14,5 +15,4 @@ def forecast_generation(hours=24):
     solar = np.clip(solar, 0, None).tolist()
     wind = np.clip(wind, 0, None).tolist()
 
-    return {"solar": [round(s, 2) for s in solar],
-            "wind": [round(w, 2) for w in wind]}
+    return {"solar": [round(s, 2) for s in solar], "wind": [round(w, 2) for w in wind]}
